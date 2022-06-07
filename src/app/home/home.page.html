@@ -1,20 +1,39 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content [fullscreen]="true" class="background">
+  <div class="row adjust">
+    <div class="col-7">
+      <img class="photo" src="/assets/img/llogo.png" />
+    </div>
+  
+  <div id="container" class="ppd col-7">
+    <form [formGroup]="formLogin" (ngSubmit)="submitForm()">
+      <ion-item lines="full" class="pad bckgnd">
+        <ion-label class="ffbold" position="floating">Email</ion-label>
+        <ion-input class="ffregular" formControlName="email" type="text" required></ion-input>
+      </ion-item>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+      <span class="error ion-padding ffr" *ngIf="errorControl.email.errors?.minlength">
+        El campo 'Email' debe de tener 5 caracteres como mínimo
+      </span>
+
+      <ion-item lines="full" class="bckgnd">
+        <ion-label class="ffbold" position="floating">Password</ion-label>
+        <ion-input class="ffregular" formControlName="password" type="password" required></ion-input>
+      </ion-item>
+      <div class="row">
+        <div class="col-8 mt">
+          <a class="small-text mt">Forgot Password?</a>
+        </div>
+      </div>
+      <span class="error ion-padding ffr" *ngIf="errorControl.email.errors?.minlength">
+        El campo 'Password' debe de tener 5 caracteres como mínimo
+      </span>
+      <div class="row">
+        <div class="col-7 pa">
+          <ion-button type="submit" class="bot" expand="block">Sign In</ion-button>
+        </div>
+      </div>
+    </form>
   </div>
+</div>
 </ion-content>

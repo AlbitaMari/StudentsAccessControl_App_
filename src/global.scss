@@ -24,3 +24,32 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+
+@font-face {
+    font-family: 'recoleta';
+    src: url('/assets/fonts/recoleta-regulardemo.otf');
+}
+@font-face {
+    font-family: 'adir-bold';
+    src: url('/assets/fonts/29LTAdir-Bold.otf');
+}
+@font-face {
+    font-family: 'adir-light';
+    src: url('/assets/fonts/29LTAdir-Light.otf');
+}
+@font-face {
+    font-family: 'adir-medium';
+    src: url('/assets/fonts/29LTAdir-Medium.otf');
+}
+@font-face {
+    font-family: 'adir-regular';
+    src: url('/assets/fonts/29LTAdir-Regular.otf');
+}
+@font-face {
+    font-family: 'opensans';
+    src: url('/assets/fonts/OpenSans-Regular.ttf');
+}
+@font-face {
+    font-family: 'opensansbold';
+    src: url('/assets/fonts/OpenSans-Bold.ttf');
+}

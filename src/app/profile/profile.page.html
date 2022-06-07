@@ -1,0 +1,30 @@
+
+  <ion-content class="bck" fullscreen>
+    <div class="row pst">
+      <div class="col-6">
+        <h1 class="ltr-title">StudentAccessControl</h1> 
+      </div>
+    </div>
+    <ion-card class="pt">
+      <div *ngIf="clickedImage">
+        <img class="photo" [src]="clickedImage" />
+      </div>
+      <div *ngIf="!clickedImage">
+        <img class="photo" src="/assets/img/user.png" />
+      </div>
+      <ion-card-header>
+        <ion-card-title class="ltr-color"><strong>{{ alumno.surname }}, {{ alumno.name }}</strong></ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <h3 class="ltr-color"><strong>Email: </strong>{{ user.email }}</h3>
+        <h3 class="ltr-color"><strong>Dni: </strong>{{ user.dni }}</h3>
+        <h3 class="ltr-color"><strong>Edad: </strong>{{ age }} años</h3>
+        <h3 class="ltr-color"><strong>Código: </strong>{{ alumno.code }}</h3>
+      </ion-card-content>
+    </ion-card>
+    <ion-card>
+      <ion-button (click)="captureImage()">
+        Click Picture
+     </ion-button>
+    </ion-card>
+  </ion-content>

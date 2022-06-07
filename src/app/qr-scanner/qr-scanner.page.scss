@@ -1,0 +1,59 @@
+ion-content{
+  --background: #F7F9FB;
+}
+
+ion-button{
+  --background: #12143D;
+  max-width:50%;
+}
+
+.letters{
+  color: #12143D;
+}
+
+.coloc{
+  text-align: -webkit-center;
+  margin-top:15%;
+}
+
+.widt{
+  height: 190px;
+}
+
+ion-card{
+  --background: #12143D;
+  text-align: center;
+  color:#F7F9FB;
+}
+ .button{
+  top:50%;
+  background-color:#0a0a23;
+  color: #fff;
+  border:none;
+  border-radius:10px;
+  box-shadow: 0px 0px 2px 2px rgb(0,0,0);
+  height: 180px;
+ }
+ .pd{
+   padding-top: 30px;
+ }
+
+ .lttr{
+  font-family: 'opensansbold';
+  font-size: 18px;
+  color:#12143D;
+ }
+
+ .ltr-title{
+  font-family: 'opensansbold';
+  font-size: 18px;
+  color:#F7F9FB;
+  background:#12143D;
+  padding-top:20px;
+  padding-bottom: 20px;
+ }
+
+ .pst{
+   text-align: center;
+   padding-top: 25px;
+ }

@@ -1,0 +1,14 @@
+<ion-content>
+  <div class="row pst">
+    <div class="col-6">
+      <h1 class="ltr-title">Alumno: {{ user.surname }}, {{ user.name }}</h1>
+    </div>
+  </div>
+  <ion-card *ngFor="let log of logs">
+    <ion-card-content>
+      <h3 class="letters">Fecha:</h3><h4 class="ltr">{{ log.created_at|date:'dd-MM-yyyy HH:mm' }}</h4>
+      <h3 class="letters">Acción:</h3><h4 class="ltr">{{ log.action }}</h4>
+      </ion-card-content>
+    </ion-card>
+
+</ion-content>

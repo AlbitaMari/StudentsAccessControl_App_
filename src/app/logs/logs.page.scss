@@ -1,0 +1,31 @@
+ion-card{ 
+    --background: #12143D;
+    text-align: center;
+}
+
+ion-content{
+    --background: #F7F9FB;
+}
+
+.letters{
+    font-family: 'opensansbold';
+    font-size: 18px;
+    color: #F7F9FB;
+}
+
+.ltr{
+    font-family: 'opensans';
+    font-size: 16px;
+    color: #F7F9FB;
+}
+
+.ltr-title{
+    font-family: 'opensansbold';
+    font-size: 18px;
+    color:#F7F9FB;
+    background:#12143D;
+    padding-top:20px;
+    padding-bottom: 20px;
+    margin-top: 20px;
+    padding-left: 10px;
+}

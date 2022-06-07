@@ -1,11 +1,14 @@
 #container {
   text-align: center;
-
   position: absolute;
   left: 0;
   right: 0;
   top: 50%;
   transform: translateY(-50%);
+}
+
+ion-content.background{
+  --background: #F7F9FB;
 }
 
 #container strong {
@@ -24,4 +27,65 @@
 
 #container a {
   text-decoration: none;
+}
+
+.bckgnd{
+  --background: #F7F9FB;
+}
+
+.ffbold{
+  font-family: 'opensansbold';
+  font-size: 18px;
+  color:black;
+}
+
+.ffregular{
+  font-family: 'opensans';
+  font-size: 16px;
+  color:black;
+}
+
+.ffr{
+  font-family: 'opensans';
+  font-size: 14px;
+  color:black;
+}
+
+.adjust{
+  text-align: center;
+}
+
+.ppd{
+  padding-top:50px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+img{
+  max-width: 70%;
+}
+
+.bot{
+  --background: #12143D;
+  height: 45px;
+  --border-radius: 6px;
+}
+
+.pa{
+  padding-top: 90px;
+  max-width: 80%;
+  margin: auto;
+}
+
+.item-native{
+  padding-inline-start: 0px;
+  padding-inline-end:0px;
+}
+
+.button-native{
+ --border-radius: 20px !important;
+}
+
+.mt{
+  margin-top: 20px;
+  font-family: 'opensans';
 }

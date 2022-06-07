@@ -1,0 +1,26 @@
+<ion-content>
+  <div class="row pst">
+    <div class="col-6">
+      <h1 class="ltr-title">StudentAccessControl</h1>
+    </div>
+  </div>
+  <div class="row coloc">
+    <div class="col-6 pd">
+      <ion-button class="button" (click)="scanBRcode()" expand="block"> <img src="/assets/img/codigo-qr.png"/></ion-button>
+      <h2 class="lttr">ScanQR</h2>
+    </div>
+  </div>
+  <div class="row pst">
+    <div *ngIf="logs">
+      <h3 class="ltr-title">Historial De Salidas</h3>
+      <ion-card *ngFor="let log of logs">
+        <ion-card-content>
+          <h3><strong>Nombre: </strong>{{ log.name }}</h3>
+          <h3><strong>Apellidos: </strong>{{ log.surname }}</h3>
+          <h3><strong>Acción: </strong>{{ log.action }}</h3>
+          <h3><strong>Fecha: </strong>{{ log.created_at|date:'dd-MM-yyyy HH:mm' }}</h3>
+        </ion-card-content>
+      </ion-card>
+    </div>
+  </div>
+</ion-content>

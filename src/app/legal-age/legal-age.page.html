@@ -1,0 +1,9 @@
+<ion-content class="green" *ngIf="legalAge == 1">
+  <ion-button class="g ppd" (click)="scannedAgain()">Volver<ion-img class="mg mrg" src="/assets/img/back-verde.png"></ion-img></ion-button>
+  <ion-img class="mt" src="/assets/img/verde.png"></ion-img> 
+</ion-content>
+
+<ion-content class="red" *ngIf="legalAge == 0">
+  <ion-button class="r ppd" (click)="scannedAgain()">Volver<ion-img class="mg mrg" src="/assets/img/back-rojo.png"></ion-img></ion-button>
+  <ion-img class="mt" src="/assets/img/rojo.png"></ion-img> 
+</ion-content>

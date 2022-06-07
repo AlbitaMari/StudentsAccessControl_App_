@@ -1,5 +1,16 @@
 {
   "name": "AccessControl",
-  "integrations": {},
-  "type": "angular"
+  "integrations": {
+    "cordova": {},
+    "capacitor": {
+      "enabled": false
+    }
+  },
+  "type": "angular",
+  "proxies": [
+    {
+      "path": "/login",
+      "proxyUrl": "http://alba.desarrollowebcadiz.com/api/"
+    }
+  ]
 }
