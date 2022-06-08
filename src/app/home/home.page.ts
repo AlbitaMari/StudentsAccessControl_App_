@@ -37,7 +37,7 @@ export class HomePage implements OnInit{
     this.isSubmitted = true;
 
     if (!this.formLogin.valid) {
-      this.resultado = 'Hay datos inválidos en el formulario';
+      this.resultado = 'Email o password inválidos';
       return false;
     } else {
       this.sService.login(this.formLogin.value.email,this.formLogin.value.password).then(data => {
