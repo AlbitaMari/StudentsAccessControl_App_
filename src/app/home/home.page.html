@@ -20,10 +20,6 @@
         El campo 'Email' debe de ser un email
       </span>
 
-      <!-- <span class="error ion-padding ffr" *ngIf="errorControl.email.errors?.requiredTrue">
-        Existen datos inválidos 
-      </span> -->
-
       <ion-item lines="full" class="bckgnd">
         <ion-label class="ffbold" position="floating">Password</ion-label>
         <ion-input class="ffregular" formControlName="password" type="password" required></ion-input>
@@ -34,6 +30,9 @@
       <div class="row">
         <div class="col-8 mt">
           <a class="small-text mt">Forgot Password?</a>
+          <ion-button (click)="forgotPassword()">
+            Forgot Password?
+         </ion-button>
         </div>
       </div>
       <div class="row">
@@ -42,7 +41,7 @@
         </div>
       </div>
     </form>
-    <div class="ffr">{{resultado}}</div>
+    <div class="err">{{resultado}}</div>
   </div>
 </div>
 </ion-content>

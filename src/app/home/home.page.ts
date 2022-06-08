@@ -22,8 +22,8 @@ export class HomePage implements OnInit{
   
   ngOnInit(){
     this.formLogin = this.fBuild.group({
-      'email': new FormControl ("",[Validators.required,Validators.minLength(5),Validators.email,Validators.requiredTrue]),
-      'password': new FormControl ("",[Validators.required, Validators.minLength(5),Validators.requiredTrue])
+      'email': new FormControl ("",[Validators.required,Validators.minLength(5),Validators.email]),
+      'password': new FormControl ("",[Validators.required, Validators.minLength(5)])
     })
   }
   get errorControl() {
@@ -52,5 +52,9 @@ export class HomePage implements OnInit{
         }
       });
     }
+  }
+
+  forgotPassword(){
+    this.router.navigateByUrl('/forgot-password');
   }
 }
