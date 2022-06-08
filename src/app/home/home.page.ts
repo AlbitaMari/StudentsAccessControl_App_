@@ -16,13 +16,14 @@ export class HomePage implements OnInit{
   isSubmitted = false;
   email:any;
   password:any;
+  resultado!:string;
 
   constructor(public fBuild: FormBuilder, public sService:SacServiceService,public router: Router ) {}
   
   ngOnInit(){
     this.formLogin = this.fBuild.group({
-      'email': new FormControl ("",[Validators.required,Validators.minLength(5)]),
-      'password': new FormControl ("",[Validators.required, Validators.minLength(5)])
+      'email': new FormControl ("",[Validators.required,Validators.minLength(5),Validators.email,Validators.requiredTrue]),
+      'password': new FormControl ("",[Validators.required, Validators.minLength(5),Validators.requiredTrue])
     })
   }
   get errorControl() {
@@ -36,7 +37,7 @@ export class HomePage implements OnInit{
     this.isSubmitted = true;
 
     if (!this.formLogin.valid) {
-      console.log('Porfavor, completa todos los campos obligatorios!')
+      this.resultado = 'Hay datos inválidos en el formulario';
       return false;
     } else {
       this.sService.login(this.formLogin.value.email,this.formLogin.value.password).then(data => {

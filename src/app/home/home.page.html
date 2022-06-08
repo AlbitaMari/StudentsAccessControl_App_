@@ -16,24 +16,33 @@
         El campo 'Email' debe de tener 5 caracteres como mínimo
       </span>
 
+      <span class="error ion-padding ffr" *ngIf="errorControl.email.errors?.email">
+        El campo 'Email' debe de ser un email
+      </span>
+
+      <!-- <span class="error ion-padding ffr" *ngIf="errorControl.email.errors?.requiredTrue">
+        Existen datos inválidos 
+      </span> -->
+
       <ion-item lines="full" class="bckgnd">
         <ion-label class="ffbold" position="floating">Password</ion-label>
         <ion-input class="ffregular" formControlName="password" type="password" required></ion-input>
       </ion-item>
+      <span class="error ion-padding ffr" *ngIf="errorControl.email.errors?.minlength">
+        El campo 'Password' debe de tener 6 caracteres como mínimo
+      </span>
       <div class="row">
         <div class="col-8 mt">
           <a class="small-text mt">Forgot Password?</a>
         </div>
       </div>
-      <span class="error ion-padding ffr" *ngIf="errorControl.email.errors?.minlength">
-        El campo 'Password' debe de tener 5 caracteres como mínimo
-      </span>
       <div class="row">
         <div class="col-7 pa">
           <ion-button type="submit" class="bot" expand="block">Sign In</ion-button>
         </div>
       </div>
     </form>
+    <div class="ffr">{{resultado}}</div>
   </div>
 </div>
 </ion-content>
