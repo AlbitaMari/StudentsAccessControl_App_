@@ -22,4 +22,8 @@ export class CodePage implements OnInit {
       this.code = res.encode;
       })
   }
+
+  onLogout(){
+    this.router.navigateByUrl('/');
+  }
 }

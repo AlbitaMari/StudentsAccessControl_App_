@@ -80,4 +80,8 @@ export class ProfilePage implements OnInit {
     this.clickedImage = localStorage.getItem(this.user.dni);
   }
 
+  onLogout(){
+    this.router.navigateByUrl('/');
+  }
+
 }

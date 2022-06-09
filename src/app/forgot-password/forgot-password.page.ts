@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+import { SacServiceService } from '../services/sac-service.service';
 
 @Component({
   selector: 'app-forgot-password',
@@ -7,9 +10,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ForgotPasswordPage implements OnInit {
 
-  constructor() { }
+  formPassword : FormGroup;
+  isSubmitted = false;
+  data:any;
 
-  ngOnInit() {
+  constructor(private router:Router,public fBuild: FormBuilder, public sService:SacServiceService) { }
+
+  ngOnInit() {    
+    this.formPassword = this.fBuild.group({
+      'email': new FormControl ("",[Validators.required,Validators.email]),
+    })
+  }
+
+
+  onLogout(){
+    this.router.navigateByUrl('/');
   }
 
 }

@@ -27,14 +27,7 @@
       <span class="error ion-padding ffr" *ngIf="errorControl.email.errors?.minlength">
         El campo 'Password' debe de tener 6 caracteres como mínimo
       </span>
-      <div class="row">
-        <div class="col-8 mt">
-          <a class="small-text mt">Forgot Password?</a>
-          <ion-button (click)="forgotPassword()">
-            Forgot Password?
-         </ion-button>
-        </div>
-      </div>
+
       <div class="row">
         <div class="col-7 pa">
           <ion-button type="submit" class="bot" expand="block">Sign In</ion-button>
@@ -42,6 +35,13 @@
       </div>
     </form>
     <div class="err">{{resultado}}</div>
+    <div class="row">
+      <div class="col-8 mt">
+        <button class="forgt" (click)="forgotPassword()">
+          Forgot Password?
+       </button>
+      </div>
+    </div>
   </div>
-</div>
+  </div>
 </ion-content>

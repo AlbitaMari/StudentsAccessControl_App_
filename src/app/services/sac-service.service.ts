@@ -14,6 +14,8 @@ alumno:any;
 scannedCode:any;
 adult:any;
 array:any;
+password:any;
+success:any;
 
 apiUrl = "http://alba.desarrollowebcadiz.com/api/";
 
@@ -104,5 +106,7 @@ apiUrl = "http://alba.desarrollowebcadiz.com/api/";
       }})
     })
   }
+
+  
 }
 

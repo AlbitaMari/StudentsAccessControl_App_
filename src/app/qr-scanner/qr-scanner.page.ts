@@ -79,4 +79,8 @@ export class QrScannerPage implements OnInit {
     this.getLogs();
   }
 
+  onLogout(){
+    this.router.navigateByUrl('/');
+  }
+
 }

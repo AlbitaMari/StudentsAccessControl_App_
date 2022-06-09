@@ -1,5 +1,14 @@
-
-  <ion-content class="bck" fullscreen>
+<ion-header>
+  <ion-toolbar>
+      <ion-buttons slot="end">
+        <ion-button (click)="onLogout()">
+          <ion-icon name="log-out-outline"></ion-icon>
+          Logout
+        </ion-button>
+      </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="bck" fullscreen>
     <div class="row pst">
       <div class="col-6">
         <h1 class="ltr-title">StudentAccessControl</h1> 
@@ -23,6 +32,6 @@
       </ion-card-content>
     </ion-card>
     <div class="ctr">
-     <button class="button" (click)="captureImage()"> <img src="/assets/img/photo.png"/></button>
+        <button class="buttonn" (click)="captureImage()"> <img src="/assets/img/photo.png"/></button>
     </div>
   </ion-content>

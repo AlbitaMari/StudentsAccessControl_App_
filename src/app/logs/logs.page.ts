@@ -10,6 +10,7 @@ import { SacServiceService } from '../services/sac-service.service';
   styleUrls: ['./logs.page.scss'],
 })
 export class LogsPage implements OnInit {
+
   logs:any;
   alumno = {
     name : '',
@@ -36,4 +37,9 @@ export class LogsPage implements OnInit {
       console.log(this.user);
       })
   }
+
+  onLogout(){
+      this.router.navigateByUrl('/');
+  }
+
 }
